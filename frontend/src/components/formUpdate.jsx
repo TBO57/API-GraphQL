@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ALL_USERS } from "../graphql/queries/query.js";
 import { UPDATE_USER } from "../graphql/mutations/mutation.js";
-
 import { useParams, useNavigate } from "react-router-dom";
 
 export const FormUpdate = () => {
@@ -11,7 +10,6 @@ export const FormUpdate = () => {
 
   //Variable donde se almacena el parámetro recibido
   let dniparam = useParams();
-  console.log(dniparam);
 
   //Campos del formulario para actualizar
   const [nombre, setNombre] = useState("");
@@ -65,6 +63,14 @@ export const FormUpdate = () => {
 
             <div className="modal-body p-5 pt-0">
               <form onSubmit={submit}>
+                <input
+                  type="text"
+                  className="form-control mb-3"
+                  name={dniparam.id}
+                  value={dniparam.id}
+                  disabled
+                  placeholder="Nombre"
+                />
                 <input
                   type="text"
                   className="form-control mb-3"

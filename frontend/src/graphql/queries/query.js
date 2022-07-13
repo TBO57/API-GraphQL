@@ -14,18 +14,3 @@ export const ALL_USERS = gql`
     }
   }
 `
-
-export const FIND_USER = gql`
-  query ListarUser($id: Int!) {
-    listarUser(Id: $id) {
-      Id
-      Nombre
-      Apellido
-      Telefono
-      Correo
-      Contrasena
-      Username
-      Rol
-    }
-  }
-`

@@ -179,7 +179,7 @@ export const Index = () => {
               </div>
             </div>
 
-            <div class="modal-body p-5 pt-0">
+            <div class="modal-body px-5 pt-0">
               <form onSubmit={submit}>
                 <input
                   type="text"
@@ -248,7 +248,7 @@ export const Index = () => {
 
                 <button
                   type="submit"
-                  className="btn btn-success mx-4 mt-3 px-4"
+                  className="btn btn-success mx-3 mt-3 px-4"
                   onClick={cerrar}
                 >
                   {" "}
