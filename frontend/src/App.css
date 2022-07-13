@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.b1 {
+  background-color: rgb(192, 218, 216);
+  border-radius: 7px;
+}
+
+.b2 {
+  background-color: red;
+  border-radius: 7px;
+
+}
+
+.titulo-modal {
+  position: relative;
+  left: 100px;
+}
+
+.abrir {
+  display: flex;
+  justify-content: flex-start;
+  float: right;
+}
+
+.buton-modal {
+  float: left;
+}
+
+#button-cancel {
+  margin-right: 10px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: columm;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  width: 280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.form-content {
+  align-items: center;
+}
+
+.title-h2 {
+  font-size: 29px;
+  margin-left: 10px;
+  padding: 10px;
+  padding-left: 2px;
+}
+
+.columns {
+  color: #fff;
+}
+
+.loading-div {
+  padding: 25px;
+
+}
