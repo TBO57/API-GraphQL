@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
       Apellido: {
         type: DataTypes.STRING(50),
         allowNull: false,
-        unique: true,
         validate: {
          notNull: {
           msg: 'Ingrese un apellido'
