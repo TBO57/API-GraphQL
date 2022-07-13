@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { ALL_USERS } from "../graphql/queries/query.js";
 import { CREATE_USER, DELETE_USER } from "../graphql/mutations/mutation.js";
-
 import { Modal, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -90,7 +89,7 @@ export const Index = () => {
     <>
       <div className="content mt-5">
         <div className="container mt-2">
-          <table className="table table-bordered table-hover">
+          <table className="table table-striped table-hover table-bordered">
             <thead className="table-active bg-primary">
               <tr align="center" className="columns">
                 <th>Id</th>
@@ -109,7 +108,7 @@ export const Index = () => {
               {data.listarUsers.map((user) => (
                 <>
                   <tr align="center" key={user.id}>
-                    <td>{user.Id}</td>
+                    <th scope="row">{user.Id}</th>
                     <td>{user.Nombre}</td>
                     <td>{user.Apellido}</td>
                     <td>{user.Telefono}</td>
@@ -121,7 +120,7 @@ export const Index = () => {
                     <td>
                       <button
                         type="button"
-                        className="b1"
+                        class="btn btn-outline-primary"
                         onClick={async () => {
                           navigate(`/actualizarusuario/${user.Id}`);
                         }}
@@ -134,7 +133,7 @@ export const Index = () => {
                     <td>
                       <button
                         type="button"
-                        className="b2"
+                        class="btn btn-danger"
                         onClick={() => deleteUser(user.Id)}
                         key={user.Id}
                       >
@@ -162,10 +161,10 @@ export const Index = () => {
       <div>
         <Modal show={show} onHide={cerrar} className="modalwindow">
           <Modal.Body className="body-modal">
-            <div className="modal-header p-5 pb-4 border-bottom-0 text">
+            <div className="modal-header pb-4 border-bottom-0 text">
               <div className="titulo-modal">
                 <h2 className="fw-bold mb-0">
-                  <span class="badge bg-warning text-dark">Ingrese datos</span>
+                  <span class="badge text-dark">Ingrese los datos</span>
                 </h2>
               </div>
 
@@ -240,7 +239,7 @@ export const Index = () => {
 
                 <button
                   id="button-cancel"
-                  className="btn btn-danger px-2"
+                  className="btn btn-danger mx-5 mt-3 px-4"
                   onClick={cerrar}
                 >
                   {" "}
@@ -249,7 +248,7 @@ export const Index = () => {
 
                 <button
                   type="submit"
-                  className="btn btn-success px-2"
+                  className="btn btn-success mx-4 mt-3 px-4"
                   onClick={cerrar}
                 >
                   {" "}
